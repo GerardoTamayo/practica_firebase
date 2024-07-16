@@ -35,6 +35,10 @@ const Home = ({ navigation }) => {
         navigation.navigate('Add');
     }
 
+    const goLogin = () => { 
+        navigation.navigate('Login');
+    }
+
     // Función que renderiza cada item de la lista
     const renderItem = ({ item }) => (
         <CardProductos
@@ -69,6 +73,11 @@ const Home = ({ navigation }) => {
                 style={styles.Button}
                 onPress={goToAdd}>
                 <Text style={styles.ButtonText}>Agregar Producto</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.Button}
+                onPress={goLogin}>
+                <Text style={styles.ButtonText}>Cerrar sesion</Text>
             </TouchableOpacity>
         </View>
     );
